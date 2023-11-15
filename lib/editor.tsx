@@ -94,7 +94,8 @@ export default class Editor extends PureComponent<Props, State> {
 
     let rectHeight = this.refs.container.getBoundingClientRect().height;
 
-    wrapper.style.display = oldDisplay;
+    // **hide the editor permanently in our case
+    // wrapper.style.display = oldDisplay;
 
     this._cm.setSize(null, rectHeight);
   }
@@ -106,6 +107,6 @@ export default class Editor extends PureComponent<Props, State> {
   }
 
   render() {
-    return <div ref="container" className="editor-holder" style="display:none;"></div>;
+    return <div ref="container" className="editor-holder"></div>;
   }
 }
